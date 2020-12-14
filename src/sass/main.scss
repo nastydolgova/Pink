@@ -213,7 +213,8 @@ body {
 .page-header__logo-img--tablet,
 .page-header__logo-img--desktop,
 .proposal__description,
-.reviews__author-desk{
+.reviews__author-desk,
+.page-footer{
     display: none;
 }
 
@@ -222,7 +223,6 @@ body {
 }
 
 .price__wrapper {
-    width: 100%;
     width: 280px;
     margin: 0 auto
 }
@@ -249,11 +249,26 @@ body {
 
 .price__list {
     transform: none;
-    width: 620px
+    width: 840px;
 }
 
 .price__value{
-    background: #000;
+    background: #283645;
+    min-width: 280x;
+}
+
+.price__value:nth-child(3){
+    background-image: url(../img/hit-ribbon.webp);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.price__value:nth-child(3):before{
+    position: absolute;
+    content: 'ХИТ';
+    top: 10px;
+    left:10px;
+    transform: rotate(-45deg);
 }
 
 .price__value--empty {
@@ -263,7 +278,7 @@ body {
 }
 
 .price__field {
-    min-width: 154px;
+    min-width: 280x;
 }
 
 .price__items {
@@ -271,7 +286,6 @@ body {
     flex-direction: column;
     align-items: center
 }
-
 
 .price__field--empty {
     min-width: 0;
@@ -304,4 +318,67 @@ body {
 #price-radio-3:checked~.pagination label[for=price-radio-3] {
     background-color: #fff;
     border: 2px solid #283645
+}
+
+.contacts{
+    padding: 50px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contacts__h1{
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 30px;
+    padding-bottom: 40px;
+}
+
+.contacts__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts__p{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+
+}
+
+.contacts__link{
+    color: #d22856;
+    font-size: 24px;
+    font-weight: 300;
+    padding:0 20px 30px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map__triangle{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+}
+
+.map picture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    height: 100%;
+    margin-top: -70px;
+    z-index: 9;
 }
