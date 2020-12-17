@@ -1,0 +1,88 @@
+.users-photo{
+    margin-top: -140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.users-photo__h1{
+    font-size:24px;
+    font-weight: 300;
+    color:#fff;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 140px;
+    width: 220px;
+}
+
+.users-photo__text{
+    font-size: 14px;
+    text-align: center;
+    width: 220px;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+.users-photo__item{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.panorama__img{
+    vertical-align: bottom;
+    width: 100%;
+    position: relative;
+}
+
+.panorama:after{
+    position: absolute;
+    content:"панорама дня";
+    font-weight: 700;
+    text-transform: uppercase;
+    right:15%;
+    color: #fff;
+    background-image: url(../img/pano.png);
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 35px;
+    text-align: center;
+    line-height: 37px;
+
+}
+
+.photo-info{
+    width: 280px;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+.panorama__description{
+    width: auto;
+}
+
+.photo-info__author{
+    padding-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.photo-info__timer{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.photo-info__text{
+   margin: 0;
+   font-size: 14px;
+   padding-bottom: 20px;
+}
+
+.users-photo__item-img{
+    vertical-align: bottom;
+}
+

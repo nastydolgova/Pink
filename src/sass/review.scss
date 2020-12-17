@@ -1,0 +1,132 @@
+.review{
+    padding: 0 20px 50px 20px;
+    background: rgb(242,242,242);
+    background: linear-gradient(355deg, rgba(242,242,242,1) 30%, rgba(255,255,255,1) 30%);
+}
+
+.review__item{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+
+}
+
+.review__text{
+    order: 2;
+}
+
+.review__text{
+    font-size: 14px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.review__author{
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.pagination{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.pagination__item{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #bec2c7;
+    border-radius: 50%;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.pagination__item--active{
+    background-color: #ffffff;
+    border: 2px solid #283645;
+}
+
+@media (min-width:660px){
+    .review{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .review__item{
+        width: 620px;
+        align-self: center;
+    }
+    
+    .review__author-desk{
+        display: inline-block;
+        padding: 15px 0 45px 0;
+    }
+
+    .review__text{
+        padding-top: 60px;
+        padding-bottom: 40px;
+        order: 0;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .review__author{
+        padding:0;
+    }
+
+    .review__pagination{
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width:1200px){
+    .review{
+        padding: 0 130px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 150px;
+    }
+
+    .review__pagination{
+        display: none;
+    }
+
+    .review__button{
+        display: inline-block
+    }
+
+    .review__item{
+        width: 720px;
+        padding-top: 130px;
+        background-image: url(../img/quotes.png);
+        background-repeat: no-repeat;
+        background-position: center 70px;
+        order: 2;
+    }
+
+    .button--prev{
+        order: 1;
+        background-image: url(../img/left-arrow.png);
+    }
+
+    .button--next{
+        order: 3;
+        background-image: url(../img/right-arrow.png);
+    }
+
+    .review__button{
+        height: 150px;
+        width: 50px;
+        border: none;
+        background-color: transparent;
+        align-self: center;
+       background-repeat: no-repeat;
+       background-position: center;
+       outline: none;
+    }
+}

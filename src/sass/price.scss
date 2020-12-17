@@ -1,0 +1,198 @@
+.price {
+    position: relative;
+    background: #f2f2f2;
+    padding-bottom:100px;
+    text-align: center;
+}
+
+.price__input{
+    display: none;
+}
+
+.price-table {
+    width: calc(300% - 133px);
+    border-collapse: collapse;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.price-table__cell {
+    padding: 16px 0 13px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.price-table__cell-inner{
+    padding: 20px 0;
+    background: #283645;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+}
+
+.price-table__cell-inner:nth-child(3){
+    background-image: url(../img/hit-ribbon.webp);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.price-table__cell-inner:nth-child(3)::before{
+    position: absolute;
+    content: 'хит';
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    left: 10px;
+    top: 17px;
+    transform: rotate(-45deg);
+}
+
+td.price-table__cell:first-child .price-table__cell-headline::after,
+td.price-table__cell:first-child .price-table__cell-headline::before {
+    content: none;
+}
+
+.price-table__cell-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.price-table__cell-cost{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    color: #f1f2f3;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.price-table__cell-headline {
+    position: relative;
+    font-size: 14px;
+    color: #283645;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: start;
+    margin: 0;
+    width: 75%;
+}
+
+
+@media (max-width:659px){ 
+    .price__controls {
+        content: "";
+        position: absolute;
+        margin: auto;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 120px;
+        height: 20px;
+        padding-bottom: 39px;
+        z-index: 10;
+    }
+    .price__controls label {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 6px;
+        vertical-align: top;
+        background: #bec2c7;
+        border: solid 3px #f2f2f2;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .price__controls label:hover {
+        background: #7e868f;
+    }
+    .price__controls label:active {
+        background: #e9ebec;
+    }
+    #btn-1:checked ~ .slider__controls label[for="btn-1"],
+    #btn-2:checked ~ .slider__controls label[for="btn-2"],
+    #btn-3:checked ~ .slider__controls label[for="btn-3"],
+    #btn-price-1:checked ~ .price__controls label[for="btn-price-1"],
+    #btn-price-2:checked ~ .price__controls label[for="btn-price-2"],
+    #btn-price-3:checked ~ .price__controls label[for="btn-price-3"] {
+        background: #fff;
+        border: solid 3px #283645;
+    }
+    .price__wrapper {
+        overflow: hidden;
+    }
+    #btn-price-1:checked ~ .price__wrapper .price-table {
+        transform: translateX(23px);
+    }
+    #btn-price-2:checked ~ .price__wrapper .price-table {
+        transform: translateX(calc(-33.333333% + 23px));
+    }
+    #btn-price-3:checked ~ .price__wrapper .price-table {
+        transform: translateX(calc(-66.666666% + 24px));
+    }
+
+    .price-table__cell:first-child {
+        display: none;
+    }
+
+    #btn-price-1:checked ~ .price__wrapper .price-table {
+        transform: translateX(23px);
+    }
+    #btn-price-2:checked ~ .price__wrapper .price-table {
+        transform: translateX(calc(-33.333333% + 23px));
+    }
+    #btn-price-3:checked ~ .price__wrapper .price-table {
+        transform: translateX(calc(-66.666666% + 24px));
+    }
+}
+
+@media (min-width:660px){
+    
+    .price__wrapper{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .price{
+        padding: 0 20px 70px 20px;
+    }
+
+    .price-table {
+        width: 100%;
+    }
+
+    .price-table__cell-headline{
+        display: none;
+    }
+    
+    .price-table__cell-empty{
+        visibility: hidden;
+    }
+
+    .price-table__cell{
+        width: 150px;
+        height: 45px;
+        padding: 0;
+    }
+
+    .price-table__cell-inner{
+        height: 75px;
+    }
+
+    .price-table__cell-title{
+        font-size: 16px;
+    }
+
+    .price-table__cell-cost{
+        font-size: 18px;
+    }  
+}
+
+@media(min-width:1200px){
+    .price {
+        padding: 0 130px 100px 130px;
+    }
+
+}
