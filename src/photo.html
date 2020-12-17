@@ -70,12 +70,27 @@
                 </div>
             </section>
             <section class="posting">
-                <h1 class="posting__text">
+                <p class="posting__text">
                     Затмите их всех!
+                </p>
+                <p class="posting__text">
                     Выкладывайте все, что накопилось в телефоне!
-                </h1>
+                </p>
                 <div class="posting__item">
-                    
+                    <img src="./img/photo-7-mobile.png" alt="#" class="posting__img">
+                    <form action="#" method="post" class="posting__form">
+                        <div class="posting__radio">
+                            <input type="radio" name="typechange" id="size" class="posting__radio-item" value="size" checked>
+                            <label class="posting__radio-label" for="size"></label>
+                            <input type="radio" name="typechange" id="color" class="posting__radio-item" value="color">
+                            <label class="posting__radio-label" for="color"></label>
+                            <input type="radio" name="typechange" id="contrast" class="posting__radio-item"
+                                value="contrast"> <label class="posting__radio-label" for="contrast"></label>
+                        </div>
+                        <input class="posting__range" type="range" min="0" max="100" step="1" value="50">
+                        <button class="posting__button" type="submit">Запостить</button>
+                        <button class="posting__button posting__button--disabled" type="button">Отмена</button>
+                    </form>
                 </div>
             </section>
         </main>
