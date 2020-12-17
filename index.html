@@ -23,7 +23,8 @@
                     <image id="logotype-white-mobile.svg" width="75" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAWCAQAAAAiV6lIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEglJ91rvAAACH0lEQVRIx7WX752aQBCGn/WXAuggpgOsIFpBoIKDCqIVnFbApQJIBdqBdiCp4EgFbgdvPvDnBAUWc87H3dmZh53xHRcddWtn7RXJo2XydJEUtNbOkt41p8c010XScmil5e9XOdRvlw7CUpK0ba3Vn+H1pLk5o+1tlA6UtP0CQMHvq92v+PiAx16xyRg3n4TYwW/Q5HPEA3LeKizTodechABIVZiTQ8xIf7sxHoZaGTu772QKE1Le08/RiAUAr+2SPwh1YGUszAZ8NwCMJyuqAqby/xMqM6GxMIhlLCeAvna+8szIKHtx1HcQqunP2fQwd8FiTsCc42dAjWH51a25WEgB+EonQQX3oAaxtMaDspAO92UJsUCkyBkqYo8H7ExHXnqxtCYBYOeaxORN6y8doeqb/dHtyVK3vE6gJS/MAcicVKsGO2jHK7DXwhSOUAVzfI4s2ttDtm159g2fVpsrvR5HvcPnXGWImoHT6sm+IhZkfHtItzfkgM9w6/uAZWEykxMCEGn9sV0WMa+ks4EaK0G/GasV73gESsxmwNGyMjmAOSkmBRLZegKXWHZKBzmBnYG1/tD3eQ0UgMn0nQhIlJernySnHbD6N5mUynfHfn1AAZiYA+BxLP+7PQULTMYb4FUi42IxOc0AexIWmI2rEFf+tRz7pE/EAkLySWAFKwACJU/EMpYYO+lE3ZPr8pGwdTnU+8QYOK1g2hOjktvzP27Ai3/GXPADAAAAAElFTkSuQmCC"/>
                   </svg>
                 </a>
-                <nav class="page-header__nav main-nav main-nav--closed main-nav--no-js">
+                <nav class="page-header__nav main-nav main-nav--no-js">
+                    <!--  main-nav--closed  -->
                     <button class="main-nav__toogle">
                     </button>
                     <ul class="main-nav__list">
@@ -33,7 +34,6 @@
                         <li class="main-nav__list-item"> <a class="main-nav__link" href="#">HTML Academy</a> </li>
                     </ul>
                 </nav>
-
         </header>
         <main class="page-main">
             <section class="download">
@@ -103,16 +103,18 @@
                         </p>
                     </div>
                 </div>
-                <div class="proposal__description">
-                    <h3 class="proposal__h3"> Эффект на 24 часа! </h3>
-                    <p class="proposal__info">
-                        Британские ученые провели исследования и доказали,
-                        что положительный эффект от использования приложения длится целые сутки!
-                    </p>
-                    <a href="#" class="proposal__linl">
-                        Узнать больше об исследовании
-                    </a>
-                </div>
+
+            </section>
+            <section class="description">
+                <img src="./img/24.png" alt="#" class="description__img">
+                <h3 class="description__h3"> Эффект на 24 часа! </h3>
+                <p class="description__info">
+                    Британские ученые провели исследования и доказали,
+                    что положительный эффект от использования приложения длится целые сутки!
+                </p>
+                <a href="#" class="description__link">
+                    Узнать больше об исследовании
+                </a>
             </section>
             <section class="review">
                 <div class="review__item slider__item">
@@ -121,107 +123,121 @@
                         привычные серые вещи! А еще я познакомился со своей будущей женой в
                         комментариях к выложенной фотографии!»
                     </p>
-                    <p class="reviews__author">
+                    <p class="review__author">
                         Николай Петров
                     </p>
-                    <span class="reviews__author-desk"> 25 лет, водитель трамвая </span>
+                    <span class="review__author-desk"> 25 лет, водитель трамвая </span>
                 </div>
                 <div class="review__pagination pagination">
                     <a href="#" class="pagination__item pagination__item--active"></a>
                     <a href="#" class="pagination__item"></a>
                     <a href="#" class="pagination__item"></a>
                 </div>
+                <button class="review__button button--prev"></button>
+                <button class="review__button button--next"></button>
             </section>
-            <section class="price">
+            <article class="price">
+                <input class="price__input" type="radio" id="btn-price-1" name="price">
+                <input class="price__input" type="radio" id="btn-price-2" name="price" checked>
+                <input class="price__input" type="radio" id="btn-price-3" name="price">
+                <div class="price__controls">
+                    <label for="btn-price-1"></label>
+                    <label for="btn-price-2"></label>
+                    <label for="btn-price-3"></label>
+                </div>
                 <div class="price__wrapper">
-                    <div class="price__items">
-                      <input class="price__switcher" type="radio" name="price" id="price-radio-1">
-                      <input class="price__switcher" type="radio" name="price" id="price-radio-2" checked>
-                      <input class="price__switcher" type="radio" name="price" id="price-radio-3">
-                      <table class="price__list">
-                        <thead class="price__list-head">
-                          <tr>
-                            <th class="price__value price__value--empty"></th>
-                            <th class="price__value">База<p>1,99 USD</p></th>
-                            <th class="price__value">Стандарт<p>3,99 USD</p></th>
-                            <th class="price__value">Анлим<p>9,99 USD</p></th>
-                          </tr>
-                        </thead>
-                        <tbody class="price__list-body">
-                          <tr>
-                            <td class="price__field price__field--empty">Розовый фильтр</td>
-                            <td class="price__field">
-                                <span class="price__name">Розовый фильтр</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21" >
-                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
-                                  </svg>
+                    <table class="price-table">
+                        <tr>
+                            <th class="price-table__cell price-table__cell-empty">
+                            </th>
+                            <th class="price-table__cell price-table__cell-inner">
+                                    <p class="price-table__cell-title">База</p>
+                                    <p class="price-table__cell-cost">1,99 usd</p>
+
+                            </th>
+                            <th class="price-table__cell price-table__cell-inner">
+                                    <p class="price-table__cell-title">Стандарт</p>
+                                    <p class="price-table__cell-cost">3,99 usd</b>
+
+                            </th>
+                            <th class="price-table__cell price-table__cell-inner">
+                                    <p class="price-table__cell-title">Анлим</p>
+                                    <p class="price-table__cell-cost">9,99 usd</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="price-table__cell price-table__cell--name">
+                                <p class="price-table__cell-name">Розовый фильтр</p>
                             </td>
-                            <td class="price__field">
-                                <span class="price__name">Розовый фильтр</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31"  height="21" >
-                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
-                                  </svg>
-                            </td>
-                            <td class="price__field">
-                                <span class="price__name">Розовый фильтр</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31"  height="21" >
-                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
-                                  </svg>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="price__field price__field--empty">Смайлики</td>
-                            <td class="price__field">
-                                <span class="price__name">Смайлики</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="27" height="26">
-                                    <image id="no.svg"  width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaBAMAAAC0pjrDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXyWyb////yWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAAASNBWXAAAAC3RSTlMAAM8QIL/vMJ9gcDfkjogAAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AwLFBIIPvBqeQAAAJRJREFUGNN1kCELAkEQhV/zbA4K1gNtW0TwNxksJrvZosViMlvk4OTk/Tl3Z86DGbhtH98wO+8hraBPROapBpvNH7d8I3Hd4yKxxo6fo+GJbR68cK+4PPA8AyrTWXaSsddFKpouUlH1pEjDrK/3Ig3xYkc+B5yS/MqAeJC3UQzDflX4yJ8RjvQRQkAfP5QTqovFutp/3YRZL/xFT7IAAAAASUVORK5CYII="/>
-                                  </svg>
-                            </td>
-                            <td class="price__field">
-                                <span class="price__name">Смайлики</span>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Розовый фильтр</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21">
-                                    <image id="yes.svg"  width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
-                                  </svg>
+                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                  </svg>                                  
                             </td>
-                            <td class="price__field">
-                                <span class="price__name">Смайлики</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21" >
-                                    <image id="yes.svg"  width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
-                                  </svg>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="price__field price__field--empty">Комментарии</td>
-                            <td class="price__field">
-                                <span class="price__name">Комментарии</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="27" height="26">
-                                    <image id="no.svg"  width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaBAMAAAC0pjrDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXyWyb////yWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAAASNBWXAAAAC3RSTlMAAM8QIL/vMJ9gcDfkjogAAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AwLFBIIPvBqeQAAAJRJREFUGNN1kCELAkEQhV/zbA4K1gNtW0TwNxksJrvZosViMlvk4OTk/Tl3Z86DGbhtH98wO+8hraBPROapBpvNH7d8I3Hd4yKxxo6fo+GJbR68cK+4PPA8AyrTWXaSsddFKpouUlH1pEjDrK/3Ig3xYkc+B5yS/MqAeJC3UQzDflX4yJ8RjvQRQkAfP5QTqovFutp/3YRZL/xFT7IAAAAASUVORK5CYII="/>
-                                  </svg>
-                            </td>
-                            <td class="price__field">
-                                <span class="price__name">Комментарии</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="27" height="26">
-                                    <image id="no.svg"  width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaBAMAAAC0pjrDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXyWyb////yWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAAASNBWXAAAAC3RSTlMAAM8QIL/vMJ9gcDfkjogAAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AwLFBIIPvBqeQAAAJRJREFUGNN1kCELAkEQhV/zbA4K1gNtW0TwNxksJrvZosViMlvk4OTk/Tl3Z86DGbhtH98wO+8hraBPROapBpvNH7d8I3Hd4yKxxo6fo+GJbR68cK+4PPA8AyrTWXaSsddFKpouUlH1pEjDrK/3Ig3xYkc+B5yS/MqAeJC3UQzDflX4yJ8RjvQRQkAfP5QTqovFutp/3YRZL/xFT7IAAAAASUVORK5CYII="/>
-                                  </svg>
-                            </td>
-                            <td class="price__field">
-                                <span class="price__name">Комментарии</span>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Розовый фильтр</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21">
-                                    <image id="yes.svg"  width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                  </svg>                                  
+                            </td>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Розовый фильтр</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21">
+                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                  </svg>
+                                  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="price-table__cell price-table__cell--name">
+                                <p class="price-table__cell-name">Смайлики</p>
+                            </td>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Смайлики</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="26">
+                                    <image id="no.svg" width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaBAMAAAC0pjrDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXyWyb////yWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAAASNBWXAAAAC3RSTlMAAM8QIL/vMJ9gcDfkjogAAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AwLFBIIPvBqeQAAAJRJREFUGNN1kCELAkEQhV/zbA4K1gNtW0TwNxksJrvZosViMlvk4OTk/Tl3Z86DGbhtH98wO+8hraBPROapBpvNH7d8I3Hd4yKxxo6fo+GJbR68cK+4PPA8AyrTWXaSsddFKpouUlH1pEjDrK/3Ig3xYkc+B5yS/MqAeJC3UQzDflX4yJ8RjvQRQkAfP5QTqovFutp/3YRZL/xFT7IAAAAASUVORK5CYII="/>
+                                  </svg>                                  
+                            </td>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Смайлики</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21">
+                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                  </svg>                                  
+                            </td>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline ">Смайлики</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21">
+                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                  </svg>                                  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="price-table__cell price-table__cell--name">
+                                <p class="price-table__cell-name">Комментарии</p>
+                            </td>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Комментарии</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="26">
+                                    <image id="no.svg" width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaBAMAAAC0pjrDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXyWyb////yWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAAASNBWXAAAAC3RSTlMAAM8QIL/vMJ9gcDfkjogAAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AwLFBIIPvBqeQAAAJRJREFUGNN1kCELAkEQhV/zbA4K1gNtW0TwNxksJrvZosViMlvk4OTk/Tl3Z86DGbhtH98wO+8hraBPROapBpvNH7d8I3Hd4yKxxo6fo+GJbR68cK+4PPA8AyrTWXaSsddFKpouUlH1pEjDrK/3Ig3xYkc+B5yS/MqAeJC3UQzDflX4yJ8RjvQRQkAfP5QTqovFutp/3YRZL/xFT7IAAAAASUVORK5CYII="/>
                                   </svg>
                             </td>
-                          </tr>
-                        </tbody>
-                      </table>
-              
-                      <div class="pagination">
-                        <label class="pagination__item" for="price-radio-1"></label>
-                        <label class="pagination__item" for="price-radio-2"></label>
-                        <label class="pagination__item" for="price-radio-3"></label>
-                      </div>
-                    </div>
-                  </div>
-            </section>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Комментарии</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="26">
+                                    <image id="no.svg" width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaBAMAAAC0pjrDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEXyWyb////yWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAAASNBWXAAAAC3RSTlMAAM8QIL/vMJ9gcDfkjogAAAABYktHRAyBs1FjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AwLFBIIPvBqeQAAAJRJREFUGNN1kCELAkEQhV/zbA4K1gNtW0TwNxksJrvZosViMlvk4OTk/Tl3Z86DGbhtH98wO+8hraBPROapBpvNH7d8I3Hd4yKxxo6fo+GJbR68cK+4PPA8AyrTWXaSsddFKpouUlH1pEjDrK/3Ig3xYkc+B5yS/MqAeJC3UQzDflX4yJ8RjvQRQkAfP5QTqovFutp/3YRZL/xFT7IAAAAASUVORK5CYII="/>
+                                  </svg>                                  
+                            </td>
+                            <td class="price-table__cell">
+                                <p class="price-table__cell-headline">Комментарии</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="21">
+                                    <image id="yes.svg" width="31" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAVCAMAAACJ68VtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEU9xkT///89xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAAAn3b/jAAAAEHRSTlMAABDPMO+/n2CPIIBwUEDfcVDfaAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAsUEgg+8Gp5AAAAjElEQVQoz3XRUQ6EIAwE0GlBZNVde//TLrQaQSgJH+RNAh2A16JncZAA32MQEd/jUji5rryy58ZEjt/seJaL5678Ic+Vs12Ebd9e3jKhPCR3frRM0FPja8eE3AcqL9+nZPQB5UitW2Cfs85nbQCcBrb5f/YXYeSrH6277sA0cwtUxtwtUNhzxFMSY/A/MpUIvCJBHE4AAAAASUVORK5CYII="/>
+                                  </svg>                                  
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
             <section class="contacts">
                 <h1 class="contacts__h1">
                     Остались вопросы?
@@ -254,15 +270,7 @@
                     </a>
                 </div>
             </section>
-            <section class="map">
-                <div class="map__triangle">
-                    <img src="./img/triangle-white-footer.webp" alt="#" class="map__triangle-map">
-                </div>
-                <picture>
-                    <source media="(min-width:960px)" scrset="./img/map.webp">
-                    <img class="map__img" src="./img/map_mobile.webp" alt="#">
-                </picture>
-            </section>
+            <section class="map" id="map"> </section>
         </main>
         <footer class="page-footer">
             <div class="page-footer__social social">
