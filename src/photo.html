@@ -46,15 +46,29 @@
                 <p class="users-photo__text">Взгляните на фотографии, которые выкладывают пользователи!
                     Видите, как не хватает ваших?</p>
                 <div class="users-photo__item panorama">
-                    <img src="./img/panorama-mobile.png" alt="" class="panorama__img">
+                    <picture>
+                        <source media="(min-width: 660px)" srcset="./img/panorama-tablet.png" >
+                        <img src="./img/panorama-mobile.png" alt="" class="panorama__img">
+                    </picture>
                     <div class="panorama__description photo-info">
                         <p class="photo-info__author">Анна <span class="photo-info__timer"> (5 минут назад)</span></p>
-
                         <p class="photo-info__text">
                             Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе,
                             задавайте свои вопросы!
                         </p>
                         <button class="photo-info__like button-like"> Нравится: 215</button>
+                    </div>
+                </div>
+                <div class="users-photo__wrp">
+                <div class="users-photo__item">
+                    <img src="./img/photo-1-mobile.png" alt="" class="users-photo__item-img">
+                    <div class="photo-info">
+                        <p class="photo-info__author">Левон <span class="photo-info__timer"> (5 часов назад)</span></p>
+
+                        <p class="photo-info__text">
+                            Вчера он на луну летал, сегодня в руки к нам попал.
+                        </p>
+                        <button class="photo-info__like button-like"> Нравится: 356</button>
                     </div>
                 </div>
                 <div class="users-photo__item">
@@ -68,6 +82,7 @@
                         <button class="photo-info__like button-like"> Нравится: 356</button>
                     </div>
                 </div>
+                </div>
             </section>
             <section class="posting">
                 <p class="posting__text">
@@ -77,17 +92,22 @@
                     Выкладывайте все, что накопилось в телефоне!
                 </p>
                 <div class="posting__item">
+                  <picture>
+                      <source  media="(min-width: 660px)" srcset="./img/photo-7-tablet.png" >
                     <img src="./img/photo-7-mobile.png" alt="#" class="posting__img">
+                </picture>
                     <form action="#" method="post" class="posting__form">
                         <div class="posting__radio">
                             <input type="radio" name="typechange" id="size" class="posting__radio-item" value="size" checked>
-                            <label class="posting__radio-label" for="size"></label>
+                            <label class="posting__radio-label posting__radio-label--size" for="size"></label>
+                            <input class="posting__range posting__range--size" type="range" min="0" max="100" step="1" value="50" >
                             <input type="radio" name="typechange" id="color" class="posting__radio-item" value="color">
-                            <label class="posting__radio-label" for="color"></label>
-                            <input type="radio" name="typechange" id="contrast" class="posting__radio-item"
-                                value="contrast"> <label class="posting__radio-label" for="contrast"></label>
+                            <label class="posting__radio-label posting__radio-label--color" for="color"></label>
+                            <input class="posting__range posting__range--color" type="range" min="0" max="100" step="1" value="50" >
+                            <input type="radio" name="typechange" id="contrast" class="posting__radio-item" value="contrast">
+                            <label class="posting__radio-label posting__radio-label--contrast" for="contrast"></label>
+                            <input class="posting__range posting__range--contrast" type="range" min="0" max="100" step="1" value="50" >
                         </div>
-                        <input class="posting__range" type="range" min="0" max="100" step="1" value="50">
                         <button class="posting__button" type="submit">Запостить</button>
                         <button class="posting__button posting__button--disabled" type="button">Отмена</button>
                     </form>

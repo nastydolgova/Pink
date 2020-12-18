@@ -46,29 +46,8 @@ body {
 @import 'users-photo';
 @import 'posting';
 
-
-// page-header
-
-
-
-//   download
-
-
-// proposal
-
-
-//description
-
-// review
-
-
-// price
-
-
-// contacts
-
-
-// map
-
-
-//footer
+@media(min-width: 660px){
+    body {
+        min-width: 660px;
+    }
+}
