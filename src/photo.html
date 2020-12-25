@@ -35,33 +35,49 @@
                 <ul class="main-nav__list">
                     <li class="main-nav__list-item"> <a class="main-nav__link" href="./index.html"> Главная</a></li>
                     <li class="main-nav__list-item"> <a class="main-nav__link" href="#">Фотографии</a> </li>
-                    <li class="main-nav__list-item"> <a class="main-nav__link" href="#"> Конкурс</a></li>
-                    <li class="main-nav__list-item"> <a class="main-nav__link" href="#">HTML Academy</a> </li>
+                    <li class="main-nav__list-item"> <a class="main-nav__link" href="./form.html"> Конкурс</a></li>
+                    <li class="main-nav__list-item"> <a class="main-nav__link" href="https://nastydolgova.github.io/Mishka/">MISHKA</a> </li>
                 </ul>
             </nav>
         </header>
-        <main class="page-main">
+        <main class="page-main page-main--photo">
             <section class="users-photo">
                 <h1 class="users-photo__h1">Фотографии пользователей</h1>
                 <p class="users-photo__text">Взгляните на фотографии, которые выкладывают пользователи!
                     Видите, как не хватает ваших?</p>
                 <div class="users-photo__item panorama">
                     <picture>
-                        <source media="(min-width: 660px)" srcset="./img/panorama-tablet.png" >
-                        <img src="./img/panorama-mobile.png" alt="" class="panorama__img">
+                        <source media="(min-width: 1200px)" srcset="./img/panorama-desktop.webp" >
+                        <source media="(min-width: 660px)" srcset="./img/panorama-tablet.webp" >
+                        <img src="./img/panorama-mobile.webp" alt="" class="panorama__img">
                     </picture>
                     <div class="panorama__description photo-info">
-                        <p class="photo-info__author">Анна <span class="photo-info__timer"> (5 минут назад)</span></p>
-                        <p class="photo-info__text">
+                        <p class="photo-info__author photo-info__author--panorama">Анна <span class="photo-info__timer"> (5 минут назад)</span></p>
+                        <p class="photo-info__text photo-info__text--panorama">
                             Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе,
                             задавайте свои вопросы!
                         </p>
-                        <button class="photo-info__like button-like"> Нравится: 215</button>
+                        <button class="photo-info__like photo-info__like--panorama button-like"> Нравится: 215</button>
                     </div>
                 </div>
                 <div class="users-photo__wrp">
                 <div class="users-photo__item">
-                    <img src="./img/photo-1-mobile.png" alt="" class="users-photo__item-img">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="./img/photo-1-desktop.webp" >
+                      <img src="./img/photo-1-mobile.webp" alt="" class="users-photo__item-img">
+                     </picture>  
+                    <div class="photo-info">
+                        <p class="photo-info__author">Левон <span class="photo-info__timer"> (5 часов назад)</span></p>
+                        <p class="photo-info__text">
+                            Вчера он на луну летал, сегодня в руки к нам попал.
+                        </p>
+                        <button class="photo-info__like button-like"> Нравится: 356</button>
+                    </div>
+                </div>  <div class="users-photo__item">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="./img/photo-1-desktop.webp" >
+                      <img src="./img/photo-1-mobile.webp" alt="" class="users-photo__item-img">
+                     </picture>  
                     <div class="photo-info">
                         <p class="photo-info__author">Левон <span class="photo-info__timer"> (5 часов назад)</span></p>
 
@@ -72,7 +88,10 @@
                     </div>
                 </div>
                 <div class="users-photo__item">
-                    <img src="./img/photo-1-mobile.png" alt="" class="users-photo__item-img">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="./img/photo-1-desktop.webp" >
+                      <img src="./img/photo-1-mobile.webp" alt="" class="users-photo__item-img">
+                     </picture>  
                     <div class="photo-info">
                         <p class="photo-info__author">Левон <span class="photo-info__timer"> (5 часов назад)</span></p>
 
@@ -93,8 +112,8 @@
                 </p>
                 <div class="posting__item">
                   <picture>
-                      <source  media="(min-width: 660px)" srcset="./img/photo-7-tablet.png" >
-                    <img src="./img/photo-7-mobile.png" alt="#" class="posting__img">
+                      <source  media="(min-width: 660px)" srcset="./img/photo-7-tablet.webp" >
+                    <img src="./img/photo-7-mobile.webp" alt="#" class="posting__img">
                 </picture>
                     <form action="#" method="post" class="posting__form">
                         <div class="posting__radio">
@@ -140,6 +159,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>

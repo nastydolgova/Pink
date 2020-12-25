@@ -21,13 +21,14 @@ body {
     font-family: 'Open Sans';
 }
 
-// .main-nav--no-js .main-nav__toogle {
-//     display: none;
-//   }
+.main-nav--no-js .main-nav__toogle {
+    display: none;
+  }
   
-// .main-nav--no-js .main-nav__wrapper {
-//     position: relative;
-//   }
+.main-nav--no-js .main-nav__wrapper {
+    position: relative;
+  }
+
 
 
 @import 'fonts';
@@ -50,4 +51,8 @@ body {
     body {
         min-width: 660px;
     }
+}
+
+.hidden{
+    display: none;
 }

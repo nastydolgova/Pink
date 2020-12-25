@@ -23,7 +23,7 @@
     flex-direction: column;
     text-align: center;
     padding-bottom: 300px;
-    background-image: url(../img/iphone-screen-3-desktop@2x.png);
+    background-image: url(../img/iphone-screen-3-desktop.webp);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 280px;
@@ -64,7 +64,7 @@
         background-position-x: -8px;
         background-position-y: 50px;
         background-size: 266px;
-        background-image: url(../img/iphone-screen-3-desktop@2x_1.png);
+        background-image: url(../img/iphone-screen-3-desktop_1.webp);
     }
 
 
@@ -108,17 +108,17 @@
     }
 
     .proposal__item:first-child{
-        background-image: url(../img/iphone-screen-1-desktop@2x.png);
+        background-image: url(../img/iphone-screen-1-desktop.webp);
         background-size: 305px;
     }
 
     .proposal__item:nth-child(2){
-        background-image: url(../img/iphone-screen-2-desktop@2x.png);
+        background-image: url(../img/iphone-screen-2-desktop.webp);
         background-size: 305px;
     }
     
     .proposal__item:nth-child(3){
-        background-image: url(../img/iphone-screen-3-desktop@2x.png);
+        background-image: url(../img/iphone-screen-3-desktop.webp);
         background-size: 305px;
     }
 

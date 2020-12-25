@@ -14,6 +14,7 @@
     width: 300px;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
 }
 
 .download__systems-list{
@@ -107,4 +108,14 @@
         .download__span{
             padding-bottom: 120px;
         }
+}
+
+.download__btn:hover{
+    background-color: #fff;
+    color: #d22856;
+}
+
+.download__btn:active{
+    background-color: #fff;
+    color: #f2cdd4;
 }
