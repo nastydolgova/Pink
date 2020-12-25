@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header class="page-header">
-            <a class="page-header__logo">
+            <a href="./index.html" class="page-header__logo">
                 <svg class="page-header__logo-img page-header__logo-img--desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="147"
                     height="40" viewBox="0 0 147 40">
                     <image id="logotype-white-desktop.svg" width="147" height="40"
@@ -29,9 +29,9 @@
                     </button>
                     <ul class="main-nav__list">
                         <li class="main-nav__list-item"> <a class="main-nav__link" href="#"> Главная</a></li>
-                        <li class="main-nav__list-item"> <a class="main-nav__link" href="#">Фотографии</a> </li>
-                        <li class="main-nav__list-item"> <a class="main-nav__link" href="#"> Конкурс</a></li>
-                        <li class="main-nav__list-item"> <a class="main-nav__link" href="#">HTML Academy</a> </li>
+                        <li class="main-nav__list-item"> <a class="main-nav__link" href="./photo.html">Фотографии</a> </li>
+                        <li class="main-nav__list-item"> <a class="main-nav__link" href="./form.html"> Конкурс</a></li>
+                        <li class="main-nav__list-item"> <a class="main-nav__link" href="https://nastydolgova.github.io/Mishka/">MISHKA</a> </li>
                     </ul>
                 </nav>
         </header>
@@ -106,7 +106,7 @@
 
             </section>
             <section class="description">
-                <img src="./img/24.png" alt="#" class="description__img">
+                <img src="./img/24.webp" alt="#" class="description__img">
                 <h3 class="description__h3"> Эффект на 24 часа! </h3>
                 <p class="description__info">
                     Британские ученые провели исследования и доказали,
@@ -128,10 +128,23 @@
                     </p>
                     <span class="review__author-desk"> 25 лет, водитель трамвая </span>
                 </div>
-                <div class="review__pagination pagination">
-                    <a href="#" class="pagination__item pagination__item--active"></a>
-                    <a href="#" class="pagination__item"></a>
-                    <a href="#" class="pagination__item"></a>
+                 <div class="review__item slider__item hidden">
+                    <p class="review__text">
+                        "Слежка стала легче"
+                    </p>
+                    <p class="review__author">
+                        Павлентий
+                    </p>
+                    <span class="review__author-desk"> 40 лет, связной </span>
+                </div>
+                <div class="review__item slider__item hidden">
+                    <p class="review__text">
+                        "Норм"
+                    </p>
+                    <p class="review__author">
+                        Марфа
+                    </p>
+                    <span class="review__author-desk"> 90 лет, колхозница </span>
                 </div>
                 <button class="review__button button--prev"></button>
                 <button class="review__button button--next"></button>
@@ -292,6 +305,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>
