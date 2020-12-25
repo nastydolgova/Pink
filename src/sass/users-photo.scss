@@ -33,6 +33,7 @@
 
 .panorama{
     position: relative;
+    width: 100%;
 }
 
 .panorama__img{
@@ -57,12 +58,23 @@
     font-size: 12px;
 }
 
+.users-photo__wrp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .photo-info{
     width: 280px;
     margin: 0 20px;
     padding: 20px;
     background-color: #f2f2f2;
     box-sizing: border-box;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
 }
 
 .panorama__description{
@@ -96,11 +108,13 @@
     background-image: url(../img/like.webp);
     background-repeat: no-repeat;
     background-position: center left;
-    padding-left: 35px;
+    padding-left: 25px;
     text-transform: uppercase;
     color: #d22856;
     font-size: 12px;
     background-color: transparent;
+    margin-top: auto;
+    width: 140px;
 }
 
 @media(min-width:660px){
@@ -120,8 +134,9 @@
         padding-bottom: 80px;
     }
 
-    .panorama{
-        width: 660px;
+    .photo-info{
+        margin: 0;
+        width: 300px;
     }
 
     .panorama:after{
@@ -134,10 +149,29 @@
     }
 
     .users-photo__wrp{
-        display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         width: 660px;
-        flex-wrap: wrap;
+    }
+
+    .users-photo__item{
+        width: 300px;
+    }
+
+    .panorama{
+        width: 660px;
+    }
+
+    .photo-info__like{
+        border: none;
+        background-image: url(../img/like.webp);
+        background-repeat: no-repeat;
+        background-position: center right;
+        padding:0;
+        text-transform: uppercase;
+        color: #d22856;
+        font-size: 12px;
+        width: 100%;
+        text-align: start;
     }
 }
 
@@ -186,18 +220,7 @@
         justify-content: space-between;
     }
 
-    .photo-info__like{
-        border: none;
-        background-image: url(../img/like.webp);
-        background-repeat: no-repeat;
-        background-position: center right;
-        padding:0;
-        text-transform: uppercase;
-        color: #d22856;
-        font-size: 12px;
-        width: 100%;
-        text-align: start;
-    }
+
     
 
 }

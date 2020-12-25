@@ -47,4 +47,3 @@ function slidePrev(){
   } 
   reviewItems[slideIndex].classList.remove('hidden')
 }
-

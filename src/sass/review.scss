@@ -2,13 +2,17 @@
     padding: 0 20px 50px 20px;
     background: rgb(242,242,242);
     background: linear-gradient(355deg, rgba(242,242,242,1) 30%, rgba(255,255,255,1) 30%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .review__item{
     flex-direction: column;
     display: flex;
     text-align: center;
-
+    width: 100%;
 }
 
 .review__text{
@@ -28,37 +32,36 @@
     margin: 0;
 }
 
-.pagination{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
+
+.button--prev{
+    order: 1;
+    background-image: url(../img/left-arrow.webp);
 }
 
-.pagination__item{
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    background-color: #bec2c7;
-    border-radius: 50%;
+.button--next{
+    order: 3;
+    background-image: url(../img/right-arrow.webp);
+}
+
+.review__button{
+    height: 50px;
+    width: 150px;
+    border: none;
+    background-color: transparent;
     align-self: center;
-    margin: 0 10px;
-}
-
-.pagination__item--active{
-    background-color: #ffffff;
-    border: 2px solid #283645;
+   background-repeat: no-repeat;
+   background-position: center;
+   outline: none;
 }
 
 @media (min-width:660px){
     .review{
-        display: flex;
-        flex-direction: column;
         padding-bottom: 60px;
     }
 
     .review__item{
-        width: 620px;
+        width: 100%;
+        padding: 0 40px;
         align-self: center;
     }
     
@@ -95,10 +98,6 @@
 
     .review__pagination{
         display: none;
-    }
-
-    .review__button{
-        display: inline-block
     }
 
     .review__item{

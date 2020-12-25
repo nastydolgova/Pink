@@ -5,8 +5,7 @@
 .page-footer,
 .page-header__logo-img--desktop,
 .page-header__logo-img--tablet,
-.review__author-desk,
-.review__button {
+.review__author-desk {
   display: none
 }
 body {
@@ -593,7 +592,19 @@ body {
   padding: 0 20px 50px 20px;
   background: #f2f2f2;
   background: -o-linear-gradient(95deg,#f2f2f2 30%,#fff 30%);
-  background: linear-gradient(355deg,#f2f2f2 30%,#fff 30%)
+  background: linear-gradient(355deg,#f2f2f2 30%,#fff 30%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
 }
 .review__item {
   -webkit-box-orient: vertical;
@@ -603,7 +614,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center
+  text-align: center;
+  width: 100%
 }
 .review__text {
   -webkit-box-ordinal-group: 3;
@@ -621,44 +633,37 @@ body {
   padding-top: 50px;
   margin: 0
 }
-.pagination {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-bottom: 40px
+.button--prev {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  background-image: url(../img/left-arrow.webp)
 }
-.pagination__item {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background-color: #bec2c7;
-  border-radius: 50%;
+.button--next {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+  background-image: url(../img/right-arrow.webp)
+}
+.review__button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: transparent;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  margin: 0 10px
-}
-.pagination__item--active {
-  background-color: #fff;
-  border: 2px solid #283645
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: 0
 }
 @media (min-width:660px) {
   .review {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     padding-bottom: 60px
   }
   .review__item {
-    width: 620px;
+    width: 100%;
+    padding: 0 40px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center
@@ -698,9 +703,6 @@ body {
   }
   .review__pagination {
     display: none
-  }
-  .review__button {
-    display: inline-block
   }
   .review__item {
     width: 720px;
@@ -1192,7 +1194,8 @@ td.price-table__cell:first-child .price-table__cell-headline::before {
   padding-bottom: 20px
 }
 .panorama {
-  position: relative
+  position: relative;
+  width: 100%
 }
 .panorama__img {
   vertical-align: bottom;
@@ -1214,13 +1217,38 @@ td.price-table__cell:first-child .price-table__cell-headline::before {
   line-height: 37px;
   font-size: 12px
 }
+.users-photo__wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
 .photo-info {
   width: 280px;
   margin: 0 20px;
   padding: 20px;
   background-color: #f2f2f2;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box
+  box-sizing: border-box;
+  min-height: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
 }
 .panorama__description {
   width: auto
@@ -1248,11 +1276,13 @@ td.price-table__cell:first-child .price-table__cell-headline::before {
   background-image: url(../img/like.webp);
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 35px;
+  padding-left: 25px;
   text-transform: uppercase;
   color: #d22856;
   font-size: 12px;
-  background-color: transparent
+  background-color: transparent;
+  margin-top: auto;
+  width: 140px
 }
 @media (min-width:660px) {
   .users-photo {
@@ -1268,8 +1298,9 @@ td.price-table__cell:first-child .price-table__cell-headline::before {
     font-size: 18px;
     padding-bottom: 80px
   }
-  .panorama {
-    width: 660px
+  .photo-info {
+    margin: 0;
+    width: 300px
   }
   .panorama:after {
     top: 5%;
@@ -1279,16 +1310,28 @@ td.price-table__cell:first-child .price-table__cell-headline::before {
     width: 620px
   }
   .users-photo__wrp {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    width: 660px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 660px
+  }
+  .users-photo__item {
+    width: 300px
+  }
+  .panorama {
+    width: 660px
+  }
+  .photo-info__like {
+    border: none;
+    background-image: url(../img/like.webp);
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding: 0;
+    text-transform: uppercase;
+    color: #d22856;
+    font-size: 12px;
+    width: 100%;
+    text-align: start
   }
 }
 @media (min-width:1200px) {
@@ -1351,18 +1394,6 @@ td.price-table__cell:first-child .price-table__cell-headline::before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between
-  }
-  .photo-info__like {
-    border: none;
-    background-image: url(../img/like.webp);
-    background-repeat: no-repeat;
-    background-position: center right;
-    padding: 0;
-    text-transform: uppercase;
-    color: #d22856;
-    font-size: 12px;
-    width: 100%;
-    text-align: start
   }
 }
 .posting {
